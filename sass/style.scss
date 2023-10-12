@@ -1,0 +1,14 @@
+body {
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game {
+  border: 1px dotted #fff;
+}
