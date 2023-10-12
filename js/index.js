@@ -3,7 +3,7 @@ const context = canvas.getContext("2d");
 const grid = 10;
 const N = 20;
 let player = { row: 10, col: 10 };
-let food = { row: 1, col: 1 };
+let food = { row: 12, col: 15 };
 let lose = { row: 19, col: 19 };
 let direction = "right";
 let count = 0;
@@ -29,6 +29,9 @@ function loop() {
 
     lose.row = Math.floor(Math.random() * N);
     lose.col = Math.floor(Math.random() * N);
+
+    // context.fillStyle = "#ff0000";
+    // context.fillRect(lose.col * grid, lose.row * grid, grid - 1, grid - 1);
   }
 
   // lose ?
@@ -37,15 +40,15 @@ function loop() {
   }
 
   // player
-  context.fillStyle = "blue";
+  context.fillStyle = "#42d7f5";
   context.fillRect(player.col * grid, player.row * grid, grid - 1, grid - 1);
 
   // food
-  context.fillStyle = "green";
+  context.fillStyle = "#00ff26";
   context.fillRect(food.col * grid, food.row * grid, grid - 1, grid - 1);
 
   // lose
-  context.fillStyle = "red";
+  context.fillStyle = "#ff0000";
   context.fillRect(lose.col * grid, lose.row * grid, grid - 1, grid - 1);
 }
 

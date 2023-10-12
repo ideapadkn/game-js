@@ -3,6 +3,7 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,5 +11,6 @@ body {
 }
 
 #game {
-  border: 1px dotted #fff;
+  border: 2px solid #fff;
+  box-shadow: 12px 12px 15px 0px rgba(4, 255, 247, 0.59);
 }

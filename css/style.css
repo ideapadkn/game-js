@@ -1,1 +1,2 @@
-body{background-color:#000}.container{display:flex;justify-content:center;align-items:center;height:100vh}#game{border:1px dotted #fff}/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+body{background-color:#000}.container{position:relative;display:flex;justify-content:center;align-items:center;height:100vh}#game{border:2px solid #fff;box-shadow:12px 12px 15px 0px rgba(4,255,247,.59)}/*# sourceMappingURL=style.css.map */47, 0.59);
+}/*# sourceMappingURL=style.css.map */
