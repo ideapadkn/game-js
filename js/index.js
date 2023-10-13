@@ -1,3 +1,4 @@
+/*
 const canvas = document.getElementById("game");
 const context = canvas.getContext("2d");
 const grid = 10;
@@ -60,3 +61,49 @@ document.addEventListener("keydown", (e) => {
 });
 
 rAF = requestAnimationFrame(loop);
+*/
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+console.log(ctx);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener("resize", function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // ctx.fillStyle = "white";
+  // ctx.fillRect(20, 20, 50, 50);
+});
+
+const mouse = {
+  x: null,
+  y: null,
+};
+canvas.addEventListener("click", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+
+  drawCircle();
+});
+canvas.addEventListener("mousemove", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+
+  drawCircle();
+});
+
+function drawCircle() {
+  ctx.fillStyle = "blue";
+  ctx.beginPath();
+  ctx.arc(mouse.x, mouse.y, 2, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// ctx.fillStyle = "white";
+// ctx.fillRect(20, 20, 50, 50); // 1, 2 - местополежение, 3 - width, 4 - height
+
+// ctx.lineWidth = 5; // border width
+// ctx.strokeStyle = "red"; // border
+// ctx.stroke();

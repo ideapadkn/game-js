@@ -1,2 +1,5 @@
-body{background-color:#000}.container{position:relative;display:flex;justify-content:center;align-items:center;height:100vh}#game{border:2px solid #fff;box-shadow:12px 12px 15px 0px rgba(4,255,247,.59)}/*# sourceMappingURL=style.css.map */47, 0.59);
+body{background-color:#000}.container{position:relative;display:flex;justify-content:center;align-items:center;height:100vh}#game{border:2px solid #fff;box-shadow:12px 12px 15px 0px rgba(4,255,247,.59)}#canvas{position:absolute;background-color:#000;width:100%;height:100%;top:0;left:0}/*# sourceMappingURL=style.css.map */%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
