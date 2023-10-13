@@ -36,6 +36,8 @@ class Particle {
   constructor() {
     this.x = mouse.x;
     this.y = mouse.y;
+    // this.x = Math.random() * canvas.width;
+    // this.y = Math.random() * canvas.height;
     this.size = Math.random() * 7 + 1;
     this.speedX = Math.random() * 3 - 1.5;
     this.speedY = Math.random() * 3 - 1.5;
@@ -58,20 +60,6 @@ function handleParticles() {
   for (let i = 0; i < paticlesArray.length; i++) {
     paticlesArray[i].update();
     paticlesArray[i].draw();
-    for (let j = i; j < paticlesArray.length; j++) {
-      const dx = paticlesArray[i].x - paticlesArray[j].x;
-      const dy = paticlesArray[i].y - paticlesArray[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < 100) {
-        ctx.beginPath();
-        ctx.strokeStyle = paticlesArray[i].color;
-        ctx.lineWidth = 0.2;
-        ctx.moveTo(paticlesArray[i].x, paticlesArray[i].y);
-        ctx.lineTo(paticlesArray[j].x, paticlesArray[j].y);
-        ctx.stroke();
-        ctx.closePath();
-      }
-    }
     if (paticlesArray[i].size <= 0.3) {
       paticlesArray.splice(i, 1);
       i--;
@@ -81,8 +69,8 @@ function handleParticles() {
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  // ctx.fillStyle = "rgba(0,0,0,0.2)";
-  // ctx.fillRect(0, 0, canvas.width, canvas.height);
+  // ctx.fillStyle = "rgba(0,0,0,0.2)"; // Это делает круги со следом!
+  // ctx.fillRect(0, 0, canvas.width, canvas.height); //
   handleParticles();
   hue += 2;
   requestAnimationFrame(animate);
