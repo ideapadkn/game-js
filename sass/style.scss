@@ -13,6 +13,8 @@ body {
 #game {
   border: 2px solid #fff;
   box-shadow: 12px 12px 15px 0px rgba(4, 255, 247, 0.59);
+  z-index: 100;
+  display: flex;
 }
 
 #canvas {
@@ -22,4 +24,5 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: -100;
 }

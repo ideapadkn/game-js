@@ -1,5 +1,5 @@
-const canvas = document.getElementById("game");
-const context = canvas.getContext("2d");
+const canvasGame = document.getElementById("game");
+const context = canvasGame.getContext("2d");
 const grid = 10;
 const N = 20;
 let player = { row: 10, col: 10 };
@@ -11,7 +11,7 @@ let count = 0;
 function loop() {
   rAF = requestAnimationFrame(loop);
 
-  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.clearRect(0, 0, canvasGame.width, canvasGame.height);
 
   if (++count == 10) {
     if (direction == "right") player.col++;
